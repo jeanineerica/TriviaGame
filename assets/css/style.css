@@ -1,0 +1,78 @@
+/* OPENING IMG */
+
+/* Hide Open img- show game div */
+.hide {
+  display:none;
+}
+
+/* Opening Img Designs */
+#logo {
+	display: block;
+	margin: auto;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#img_container {
+    position:relative;
+    display:inline-block;
+    text-align:center;
+    border:1px solid red;
+}
+
+.open-btn {	
+	display: block;
+	margin: auto;
+    background-color: white;
+    border-color: red;
+    border-style: solid;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* Start Btn Design */
+.start-btn {
+    background-color: white;
+    border-color: red;
+    border-style: solid;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+/* GAME DESIGN */
+p {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+	
+}
+
+/* Button Design */
+
+button:hover {
+    background-color: grey;
+
+}
+
+/* Button focus */
+
+button:focus {
+    outline:0;
+}
+
+#game-container {
+	position:relative;
+    display:none;
+    text-align:center;
+    padding: 30px;
+}
+
+/* MULTIPLE CHOICE BTN */
+.mc-btn {
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    border-style: solid;
+    border-color: red;
+}    

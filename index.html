@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bueller...Bueller...</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- My Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">  
+
+</head>
+
+<body>
+
+<!-- OPENING IMG -->
+<div id="img-container" class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <img id="logo" src="assets/images/open-image.jpg" alt="Ferris Bueller's Day Off"/>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="img-container">        
+          <button id="begin-btn" class="open-btn">click here to begin</button>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<!-- TTIVIA GAME -->
+<div id="game-container" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <header>Ferris Bueller's Day Off Trivia</header>
+      <p> You have 20 seconds to answer each question </p>
+      <button class="start-btn">start</button>
+      <div id="timer"></div>
+      <h2 id="triviaQuestions"></h2>
+      <div id="multipleChoice">
+        <div class="list-group choices">
+          <div class="row">
+            <div class="col-md-12">
+              <button id="a" class="list-group item mc-btn"></button>
+            </div>
+          </div> 
+          <div class="row">
+            <div class="col-md-12">             
+              <button id="b" class="list-group item mc-btn"></button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button id="c" class="list-group item mc-btn"></button>
+            </div>
+          </div>    
+          <div class="row">
+            <div class="col-md-12">              
+              <button id="d" class="list-group item mc-btn"></button>
+            </div>
+          </div>   
+          <div class="row">
+            <div class="col-md-12">
+              <div class="answerImg"></div>
+            </div>
+          </div>                  
+        </div>
+        <div class="answer-img"></div>
+        <div class="panel panel-default results">
+          <div class="panel-heading">Results</div>
+          <div class="panel-body">
+            <div class="list-group">
+              <div id="correct"></div>
+                <div id="incorrect"></div>
+                <div id="unanswered"></div>
+                <button class="restart">restart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>  
+</div>
+
+
+
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <!-- Latest compiled and minified JavaScript for bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Game logic -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
