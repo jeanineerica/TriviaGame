@@ -41,6 +41,16 @@
     font-weight: bold;
 }
 
+/* Restart Button */
+.restart {
+    background-color: white;
+    border-color: red;
+    border-style: solid;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
 /* GAME DESIGN */
 p {
     font-family: 'Roboto', sans-serif;

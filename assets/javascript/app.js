@@ -12,12 +12,8 @@ $(".open-btn").click(function(){
 
 
 //Timer
-$('#timer').html('<h1>Time Remaining: 20 seconds</h1>');
+$('#timer').html('<h2>Time Remaining: 20 seconds</h2>');
 
-//Answers Image
-// var answerimg = $("<img></img>");
-// posterimg.attr("src", questions.answer-img);
-$(".answer-img").hide();
 
 //Global Variables
 var questionNum = 0, correctAnswer = 0, incorrect = 0, unanswered = 0; 
@@ -32,7 +28,7 @@ var clockRunning = false;
 //Hide results & choices untill called for
 $('.results').hide();
 $('#multipleChoice').hide();
-$('.answerImg').hide();
+
 
 //Restart Button
 $('.restart').hide();
@@ -43,70 +39,70 @@ var trivia = {
 			{
 				"question" : "Who directed Ferris Bueller's Day Off?",
 				"answer" : "John Hughes",
-				"explain" :"blahblahblah",
+				"explain" :"John Hughes created other great films including Sixteen Candles",
 				"multipleChoice" : [ "John Waters", "John Hughes", "John Ford", "John Singleton" ]
 			},
 
 			{
 				"question" : "By the end of the movie, Ferris had a record of how many absent days?",
 				"answer" : "2",
-				"explain" :"blahblahblah",
+				"explain" :"You might think it's 9, but think again.",
 				"multipleChoice" : [ "9", "6", "2", "0" ]
 			},	
 
 			{
 				"question" : "in 1930, the Republican controlled House of Representatives, in an effort to alleviate the effects of the...Anyone?...Anyone?",
 				"answer" : "The Great Depression",
-				"explain" :"blahblahblah",
+				"explain" :"...Anyone?...Anyone?",
 				"multipleChoice" : [ "Hawley-Smoot Terrif Act", "Laffer Curve", "Voodoo Economics", "The Great Depression" ]
 			},	
 
 			{
 				"question" : "What baseball game does Ferris attend?",
 				"answer" : "Chicago Cubs vs Atlanta Braves",
-				"explain" :"blahblahblah",
+				"explain" :"What's the score?",
 				"multipleChoice" : [ "Chicago Cubs vs Atlanta Braves", "Detroit Redwings vs Chicago Cubs", "San Francisco Giants vs Chicago Bears", "Chicago Cubs vs New York Yankees" ]
 			},	
 
 			{
 				"question" : "What shirt does Cameron wear?",
 				"answer" : "Detroit Redwings Jersey",
-				"explain" :"blahblahblah",
+				"explain" :"Howe #9",
 				"multipleChoice" : [ "Chicago Cubs Jersey", "Detroit Redwings Jersey", "New York Yankees Jersey", "Plain White T-Shirt" ]
 			},	
 
 			{
 				"question" : "Ferris and Cameron borrow what car?",
 				"answer" : "1961 Ferrari 250 GT California",
-				"explain" :"blahblahblah",
+				"explain" :"If you have the means",
 				"multipleChoice" : [ "1961 Ferrari 250 GT California", "1964 Ferrari 250 LM", "1957 Ferrari 250 Testa Rosa", "1964 Ferrari 275 GTB" ]
 			},	
 
 			{
 				"question" : "Who is the Sausage King of Chicago?",
 				"answer" : "Abe Froman",
-				"explain" :"blahblahblah",
+				"explain" :"Snooty.",
 				"multipleChoice" : [ "Garth Volbeck", "Abe Froman", "Jeffery Jones", "Lowe Stein" ]
 			},	
 
 			{
 				"question" : "In the Chicago Art Institute, what is the name of the painting Cameron fearfully stares at?",
 				"answer" : "A Sunday Afternoon on the Island of La Grande Jatte",
-				"explain" :"blahblahblah",
+				"explain" :"Motherly Love",
 				"multipleChoice" : [ "Woman with a Parasol", "The Circus", "The Seine Courbevoie", "A Sunday Afternoon on the Island of La Grande Jatte" ]
 			},	
 
 			{
 				"question" : "Ferris asked for a car, and got what?",
 				"answer" : "computer",
-				"explain" :"blahblahblah",
+				"explain" :"and that's how he changed how many days of school he missed",
 				"multipleChoice" : [ "bike", "phone", "computer", "piano" ]
 			},	
 
 			{
 				"question" : "My bestfriend's sister's boyfriend's brother's girlfriend heard from this guy who knows this kid who's going with the girl who saw Ferris pass out where?",
 				"answer" : "31 Flavors",
-				"explain" :"blahblahblah",
+				"explain" :"Save Ferris",
 				"multipleChoice" : [ "the Arcade", "Central Perk", "31 Flavors", "The Max" ]
 			},																									
 	]
@@ -120,6 +116,10 @@ function results() {
 	$('#correct').html("Correctly Answered " + correctAnswer);
 	$('#incorrect').html("Incorrectly Answered " + incorrect);
 	$('#unanswered').html("Unanswered " + unanswered);
+	$('.restart').show();
+
+	
+
 }
 
 //Game Start
@@ -151,6 +151,7 @@ function askQuestions(questionNum) {
 function checkCorrect(guessed) {
 	if (guessed === trivia.questions[questionNum].answer) {
 		return true;
+
 	}
 	else {
 		return false;
@@ -166,12 +167,15 @@ $('.start-btn').on('click', function(){
 	start();
 });
 
+
+
 //List Answers
 $('.list-group .item').on('click', function(){
 	if(checkCorrect($(this).html()) === true) {
 		correctAnswer ++;
 		questionNum ++;		
 		askQuestions(questionNum);
+
 
 	}
 	else if (checkCorrect($(this).html()) === false){
@@ -189,7 +193,7 @@ function triviaTimer() {
 	console.log(countdown);
 
 	//Timer Div
-	$('#timer').html('<h1>Time Remaining: ' + countdown + ' seconds</h1>');
+	$('#timer').html('<h2>Time Remaining: ' + countdown + ' seconds</h2>');
 
 	//When Timer gets to 0
 	if (countdown === 0) {
@@ -214,5 +218,8 @@ function triviaTimer() {
 
 
 	}
+
+
+
 
 
