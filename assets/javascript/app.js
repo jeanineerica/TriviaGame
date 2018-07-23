@@ -117,6 +117,15 @@ function results() {
 	$('#incorrect').html("Incorrectly Answered " + incorrect);
 	$('#unanswered').html("Unanswered " + unanswered);
 	$('.restart').show();
+	//Reset
+	// $('.reset').on('click', function(reset){
+	// 	console.log("reset");
+	// });
+
+
+	$('.restart').click(function() {
+		location.reload();
+	});
 
 	
 
@@ -128,6 +137,14 @@ function start () {
 	counter=setInterval	(triviaTimer, 1000);
 	clockRunning = true;
 }
+
+function restart () {
+	askQuestions(questionNum);
+	counter=setInterval	(triviaTimer, 1000);
+	clockRunning = true;
+}	
+
+
 
 //Display Questions
 function askQuestions(questionNum) {
@@ -207,6 +224,7 @@ function triviaTimer() {
 		if (questionNum === 10) {
 			clearInterval(counter);
 			results();
+
 		}
 		else {
 			askQuestions(questionNum);
@@ -218,6 +236,7 @@ function triviaTimer() {
 
 
 	}
+
 
 
 
