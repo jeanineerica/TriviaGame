@@ -117,12 +117,6 @@ function results() {
 	$('#incorrect').html("Incorrectly Answered " + incorrect);
 	$('#unanswered').html("Unanswered " + unanswered);
 	$('.restart').show();
-	//Reset
-	// $('.reset').on('click', function(reset){
-	// 	console.log("reset");
-	// });
-
-
 	$('.restart').click(function() {
 		location.reload();
 	});

@@ -58,6 +58,10 @@ p {
 	
 }
 
+#multipleChoice {
+    display: center;
+}
+
 /* Button Design */
 
 button:hover {
@@ -80,8 +84,10 @@ button:focus {
 
 /* MULTIPLE CHOICE BTN */
 .mc-btn {
+    position: center;
     text-align: center;
     padding: 5px;
+    margin: 2px;
     background-color: white;
     border-style: solid;
     border-color: red;
